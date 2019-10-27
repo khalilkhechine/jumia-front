@@ -1,0 +1,29 @@
+<h2 class="text-primary">Client List</h2>
+
+<div class="row">
+  <input class="form-control col-6" placeholder="Type text here to search" type="text" [formControl]="searchInputFormControl">
+</div>
+
+<br>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Phone number</th>
+    <th>Address</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of displayedClient">
+    <td>{{c.id}}</td>
+    <td>{{c.firstName}}</td>
+    <td>{{c.lastName | uppercase}}</td>
+    <td>{{c.email}}</td>
+    <td>{{c.phoneNumber}}</td>
+    <td>{{c.address}}</td>
+  </tr>
+  </tbody>
+</table>
